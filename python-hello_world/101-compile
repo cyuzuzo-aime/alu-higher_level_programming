@@ -1,0 +1,9 @@
+#!/bin/bash
+
+python3 -m py_compile "$PYFILE"
+
+PYCOMPILED="${PYFILE}c"
+COMPILED_PATH="__pycache__/$(ls __pycache__/ | grep "$(basename "$PYFILE" .py).*.pyc")"
+
+mv "$COMPILED_PATH" "$PYCOMPILED"
+echo "Compiled file: $PYCOMPILED"
