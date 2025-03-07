@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 import sys
 
+
 def is_safe(board, row, col, N):
     for i in range(row):
         if board[i] == col or abs(board[i] - col) == abs(i - row):
             return False
     return True
+
 
 def solve_nqueens(N, row=0, board=[]):
     if row == N:
@@ -15,6 +17,7 @@ def solve_nqueens(N, row=0, board=[]):
     for col in range(N):
         if is_safe(board, row, col, N):
             solve_nqueens(N, row + 1, board + [col])
+
 
 def main():
     if len(sys.argv) != 2:
@@ -32,6 +35,7 @@ def main():
         sys.exit(1)
 
     solve_nqueens(N)
+
 
 if __name__ == "__main__":
     main()
