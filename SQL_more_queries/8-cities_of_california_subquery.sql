@@ -1,7 +1,3 @@
--- SQL
-
-USE hbtn_0d_usa;
-
 -- List cities in California by state_id
 SELECT name
 FROM cities

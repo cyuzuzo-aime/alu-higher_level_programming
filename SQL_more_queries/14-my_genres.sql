@@ -1,6 +1,3 @@
--- Use the provided database
-USE hbtn_0d_tvshows;
-
 -- List all genres for the show 'Dexter', sorted by genre name
 SELECT genres.name
 FROM genres

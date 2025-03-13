@@ -1,6 +1,3 @@
--- Use the provided database
-USE hbtn_0d_tvshows;
-
 -- List all shows and their linked genres (or NULL if no genre linked)
 SELECT tv_shows.title, genres.name
 FROM tv_shows

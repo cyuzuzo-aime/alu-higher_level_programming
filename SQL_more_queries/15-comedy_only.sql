@@ -1,6 +1,3 @@
--- Use the provided database
-USE hbtn_0d_tvshows;
-
 -- List all Comedy shows, sorted by title
 SELECT tv_shows.title
 FROM tv_shows
