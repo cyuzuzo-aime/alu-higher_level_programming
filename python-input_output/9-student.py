@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Module for defining a Student class with attributes and a method to retrieve a dictionary representation."""
+"""Module for defining a Student class with attributes"""
 
 
 class Student:
