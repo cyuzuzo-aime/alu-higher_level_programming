@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Module for adding command-line arguments to a list"""
+"""Module for adding command-line arguments to a list and saves them to a file"""
 
 import sys
 from save_to_json_file import save_to_json_file
