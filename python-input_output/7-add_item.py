@@ -1,24 +1,25 @@
 #!/usr/bin/python3
 
-"""Module for adding command-line arguments to a list and saves them to a file"""
+"""Task 7 module"""
 
 import sys
+import json
+
+# Import necessary functions
 from save_to_json_file import save_to_json_file
 from load_from_json_file import load_from_json_file
 
+# Collect arguments from the command line
+arglist = list(sys.argv[1:])
 
-def main():
-    """Adds arguments to a list and saves them to a JSON file."""
-    
-    try:
-        items = load_from_json_file('add_item.json')
-    except FileNotFoundError:
-        items = []
-    
-    items.extend(sys.argv[1:])
-    save_to_json_file(items, 'add_item.json')
+# Attempt to load existing data from the JSON file
+try:
+    old_data = load_from_json_file("add_item.json")
+except Exception:
+    old_data = []
 
+# Add new data from the command-line arguments
+old_data.extend(arglist)
 
-if __name__ == '__main__':
-    main()
-
+# Save updated data back to the JSON file
+save_to_json_file(old_data, "add_item.json")
