@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
+"""Module for converting an object to its JSON string representation."""
+
 import json
 
-"""Module for converting an object to its JSON string representation."""
 
 def to_json_string(my_obj):
     
