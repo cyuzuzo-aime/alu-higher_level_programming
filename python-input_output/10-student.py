@@ -1,19 +1,23 @@
 #!/usr/bin/python3
 
-"""Module for defining a Student class with attribute filtering in dictionary representation."""
+"""Module"""
 
 
 class Student:
-    """Class representing a student with first name, last name, and age."""
+    """Class"""
 
     def __init__(self, first_name, last_name, age):
-        """Initializes the student with first name, last name, and age."""
+        """Function"""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        """Returns the dictionary representation of the Student instance."""
-        if isinstance(attrs, list) and all(isinstance(attr, str) for attr in attrs):
-            return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
+        """Function"""
+        if isinstance(attrs, list) and all(
+            isinstance(attr, str) for attr in attrs
+        ):
+            return {
+                key: getattr(self, key) for key in attrs if hasattr(self, key)
+            }
         return self.__dict__
