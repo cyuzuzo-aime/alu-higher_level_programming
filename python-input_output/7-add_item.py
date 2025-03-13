@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 
-"""Module for adding command-line arguments to a list and saving it to a file."""
+"""Module for adding command-line arguments to a list and saving them to a JSON file.
+
+This script loads a list from a JSON file named 'add_item.json', adds all
+command-line arguments to the list, and saves the updated list back to the file.
+If the file doesn't exist, it creates the file and initializes the list.
+"""
 
 import sys
 from save_to_json_file import save_to_json_file
@@ -21,3 +26,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
